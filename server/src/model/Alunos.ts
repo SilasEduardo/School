@@ -7,8 +7,9 @@ class Alunos {
   firtName!: string;
   lastName!: string;
   age!: number;
-  grades!: [];
+  grades!: Array<number>;
   create_at!: Date;
+  stutus!: boolean;
 
   constructor(){
     if(!this.id){

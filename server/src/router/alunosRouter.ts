@@ -1,9 +1,22 @@
 import { Router } from 'express';
+import { AlunosConttroler } from '../controller/AlunosConttroller';
 
 const alunosRouter = Router();
+const alunosController = new AlunosConttroler()
+
+alunosRouter.post('/', (req, res) => {
+  const { firtName, age, grade } = req.body;
+
+  alunosController.createAluno({firtName, age, grade})
+
+  res.status(200).send();
+
+});
 
 alunosRouter.get('/', (req, res) => {
-  res.send('hello world')
+  const all = alunosController.listAlunos()
+
+  res.status(200).json(all)
 })
 
 
