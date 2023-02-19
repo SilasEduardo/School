@@ -45,17 +45,32 @@ class AlunosConttroler {
       stutus: true,
     });
 
-    const alunos = await prima.alunos.update({
+    await prima.alunos.update({
       where: {
         id,
       },
       data: aluno
     })
 
-    console.log(alunos)
    }
+// =========================| DELETAR ALUNO |======================//
 
+  async deleteAlunos(id: any){
 
+    console.log(id)
+
+    if(!id){
+      return 'ID Precisa ser passado'
+    } 
+
+    const alunosNotExists = await prima.alunos.findUnique({where: {id}})
+
+    if(!alunosNotExists){
+      return 'Aluno não existe'
+    } 
+
+    await prima.alunos.delete({where: {id}})
+  }
 }
 
 

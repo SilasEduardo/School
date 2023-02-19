@@ -37,7 +37,17 @@ alunosRouter.put('/', (req, res) => {
 
   res.status(200).send();
 
-} )
+});
 
+
+// =========================| DELETAR ALUNO |======================//
+
+alunosRouter.delete('/:id', (req, res) => {
+  const {id} = req.headers;
+  
+  const aluno = alunosController.deleteAlunos(id)
+
+  res.send(200).json(aluno)
+})
 
 export { alunosRouter };
