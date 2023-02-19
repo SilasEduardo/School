@@ -7,7 +7,7 @@ const alunosController = new AlunosConttroler()
 alunosRouter.post('/', (req, res) => {
   const { firtName, age, grade } = req.body;
 
-  alunosController.createAluno({firtName, age, grade})
+  alunosController.createAluno({firtName, age, grade});
 
   res.status(200).send();
 
@@ -16,10 +16,9 @@ alunosRouter.post('/', (req, res) => {
 alunosRouter.get('/', (req, res) => {
   const all = alunosController.listAlunos();
   all.then(aluno => {
-    res.status(200).json(aluno)
-  })
- 
-})
+    res.status(200).json(aluno);
+  });
+});
 
 
 

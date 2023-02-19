@@ -2,7 +2,6 @@ import { Alunos } from '../model/Alunos';
 import { PrismaClient } from  "@prisma/client"
 
 const prima = new PrismaClient()
-
 const aluno = new Alunos();
 
 interface IAlunos {
@@ -13,7 +12,7 @@ interface IAlunos {
 }
 
 class AlunosConttroler {
-
+//=====================| CRIANDO ALUNOS |=========================//
   async createAluno({firtName, age, grade}: IAlunos){
 
     Object.assign(aluno, {
@@ -26,9 +25,17 @@ class AlunosConttroler {
      await prima.alunos.create({data: aluno})
    }
 
+
+// ======================| LISTANDO TODOS OS ALUNOS |===================//
   async listAlunos(){
     const all = await prima.alunos.findMany()
     return all
+   }
+
+
+// =========================| ATUALIZANDO ALUNO |======================//
+   async updateAlunos(){
+
    }
 
 }
