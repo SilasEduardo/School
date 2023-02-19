@@ -14,9 +14,11 @@ alunosRouter.post('/', (req, res) => {
 });
 
 alunosRouter.get('/', (req, res) => {
-  const all = alunosController.listAlunos()
-
-  res.status(200).json(all)
+  const all = alunosController.listAlunos();
+  all.then(aluno => {
+    res.status(200).json(aluno)
+  })
+ 
 })
 
 

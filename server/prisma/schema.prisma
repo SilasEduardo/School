@@ -16,13 +16,7 @@ model Alunos{
   firtName String
   age String
   grade Int[]
-
-  
+  create_at DateTime
+  stutus Boolean
 }
-
-//  firtName,
-//       age,
-//       grade,
-//       create_at: new Date(),
-//       stutus: true,
 
