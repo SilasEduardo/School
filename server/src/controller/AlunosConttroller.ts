@@ -34,9 +34,27 @@ class AlunosConttroler {
 
 
 // =========================| ATUALIZANDO ALUNO |======================//
-   async updateAlunos(){
 
+   async updateAlunos({firtName, age, grade, id}: IAlunos){
+
+    Object.assign(aluno, {
+      firtName,
+      age,
+      grade,
+      create_at: new Date(),
+      stutus: true,
+    });
+
+    const alunos = await prima.alunos.update({
+      where: {
+        id,
+      },
+      data: aluno
+    })
+
+    console.log(alunos)
    }
+
 
 }
 

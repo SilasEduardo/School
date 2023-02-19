@@ -4,6 +4,9 @@ import { AlunosConttroler } from '../controller/AlunosConttroller';
 const alunosRouter = Router();
 const alunosController = new AlunosConttroler()
 
+//=====================| CRIANDO ALUNOS |=========================//
+
+
 alunosRouter.post('/', (req, res) => {
   const { firtName, age, grade } = req.body;
 
@@ -13,6 +16,9 @@ alunosRouter.post('/', (req, res) => {
 
 });
 
+
+// ======================| LISTANDO TODOS OS ALUNOS |===================//
+
 alunosRouter.get('/', (req, res) => {
   const all = alunosController.listAlunos();
   all.then(aluno => {
@@ -21,7 +27,17 @@ alunosRouter.get('/', (req, res) => {
 });
 
 
+// =========================| ATUALIZANDO ALUNO |======================//
 
+alunosRouter.put('/', (req, res) => {
+
+  const { firtName, age, grade, id } = req.body;
+
+  alunosController.updateAlunos({firtName, age, grade, id});
+
+  res.status(200).send();
+
+} )
 
 
 export { alunosRouter };
