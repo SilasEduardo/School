@@ -5,7 +5,7 @@ const prima = new PrismaClient()
 const aluno = new Alunos();
 
 interface IAlunos {
-  id?: string
+  id: number,
   firtName: string,
   age: string,
   grade: Array<number>,
@@ -37,6 +37,12 @@ class AlunosConttroler {
 
    async updateAlunos({firtName, age, grade, id}: IAlunos){
 
+    const alunosNotExists = await prima.alunos.findUnique({where: { id }})
+
+    if(!alunosNotExists){
+      return null;
+    } 
+
     Object.assign(aluno, {
       firtName,
       age,
@@ -57,13 +63,13 @@ class AlunosConttroler {
 
   async deleteAlunos(id: any){
 
-    console.log(id)
-
     if(!id){
       return 'ID Precisa ser passado'
     } 
 
     const alunosNotExists = await prima.alunos.findUnique({where: {id}})
+
+ 
 
     if(!alunosNotExists){
       return 'Aluno não existe'

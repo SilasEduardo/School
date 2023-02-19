@@ -12,7 +12,7 @@ datasource db {
 
 
 model Alunos{
-  id String @id
+  id Int @id @default(autoincrement())
   firtName String
   age String
   grade Int[]

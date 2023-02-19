@@ -33,7 +33,8 @@ alunosRouter.put('/', (req, res) => {
 
   const { firtName, age, grade, id } = req.body;
 
-  alunosController.updateAlunos({firtName, age, grade, id});
+  const user = alunosController.updateAlunos({firtName, age, grade, id});
+
 
   res.status(200).send();
 
@@ -43,7 +44,7 @@ alunosRouter.put('/', (req, res) => {
 // =========================| DELETAR ALUNO |======================//
 
 alunosRouter.delete('/:id', (req, res) => {
-  const {id} = req.headers;
+  const {id} = req.params;
   
   const aluno = alunosController.deleteAlunos(id)
 
