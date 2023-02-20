@@ -16,29 +16,22 @@ function DarkExample() {
    <Table striped bordered hover variant="dark">
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>id</th>
+          <th>Nome</th>
+          <th>idade</th>
+          <th>Email</th>
+          <th>Notas</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Silas</td>
+          <td>28</td>
+          <td>silasandrade94@gmail.com</td>
+          <td>1, 10, 5, 15</td>
+          <td>Ativo</td>
         </tr>
       </tbody>
     </Table>
