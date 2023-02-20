@@ -1,18 +1,16 @@
 import React from 'react';
 import NavBar from '../Nav';
 import DarkExample from '../Table';
+import { Container } from '../../styled/GlobalStyles'
 import './Main.css';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <div>
-      <h1>Lista de Alunos</h1>
-      </div>
-      <div>
+      <Container>
       <DarkExample />
-      </div>
+      </Container>
       
     </div>
   );

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'; 
+import styled, { createGlobalStyle } from 'styled-components'; 
 
 
 export default createGlobalStyle`
@@ -8,4 +8,13 @@ export default createGlobalStyle`
   outline: none;
   box-sizing: border-box;
  }
+`
+export const Container = styled.section`
+  margin-top: 10rem;
+  margin-left: 10rem;
+  max-width: 60rem;
+  max-height: 60rem;
+  background: #3a30ce;
+  padding: 30px;
+  border: solid 1px #3a30ce;
 `

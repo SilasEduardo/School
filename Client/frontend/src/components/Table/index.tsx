@@ -2,10 +2,18 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Title } from './steled';
 
 function DarkExample() {
   return (
-    <Table striped bordered hover variant="dark">
+  <>
+ <Title>
+  <h1 className='title'>Lista de Alunos</h1>
+</Title> 
+
+
+  
+   <Table striped bordered hover variant="dark">
       <thead>
         <tr>
           <th>#</th>
@@ -34,6 +42,9 @@ function DarkExample() {
         </tr>
       </tbody>
     </Table>
+  </>
+
+   
   );
 }
 
