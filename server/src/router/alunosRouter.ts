@@ -29,9 +29,10 @@ alunosRouter.get('/', (req, res) => {
 
 // =========================| ATUALIZANDO ALUNO |======================//
 
-alunosRouter.put('/', (req, res) => {
-
-  const { firtName, age, grade, id } = req.body;
+alunosRouter.put('/:id', (req, res) => {
+  const id  = parseFloat(req.params.id)
+  
+  const { firtName, age, grade } = req.body;
 
   const user = alunosController.updateAlunos({firtName, age, grade, id});
 
@@ -44,11 +45,20 @@ alunosRouter.put('/', (req, res) => {
 // =========================| DELETAR ALUNO |======================//
 
 alunosRouter.delete('/:id', (req, res) => {
-  const {id} = req.params;
-  
-  const aluno = alunosController.deleteAlunos(id)
+    const id = req.params.id;
+    const alunos = alunosController.deleteAlunos(parseInt(id));
 
-  res.send(200).json(aluno)
+    alunos.then(aluno => {
+      if(!aluno){
+        console.log(aluno)
+        res.status(400).send("Erro usuario não existe ");
+      }else{
+        res.status(200).send();
+      };
+    });
+  
+ 
+ 
 })
 
 export { alunosRouter };
