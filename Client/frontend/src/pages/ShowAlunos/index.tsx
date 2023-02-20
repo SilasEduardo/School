@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from '../Nav';
-import DarkExample from '../Table';
+import NavBar from '../../components/Nav';
+import DarkExample from '../../components/Table';
 import { Container } from '../../styled/GlobalStyles'
 import './Main.css';
 

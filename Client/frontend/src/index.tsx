@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Main from './components/Main';
+import Main from './pages/ShowAlunos';
 
 import GlobalStyles from './styled/GlobalStyles';
 

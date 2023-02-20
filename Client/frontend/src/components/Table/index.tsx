@@ -2,6 +2,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaEdit, FaWindowClose } from 'react-icons/fa';
 import { Title } from './steled';
 
 function DarkExample() {
@@ -22,6 +23,8 @@ function DarkExample() {
           <th>Email</th>
           <th>Notas</th>
           <th>Status</th>
+          <th>Editi</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -32,6 +35,8 @@ function DarkExample() {
           <td>silasandrade94@gmail.com</td>
           <td>1, 10, 5, 15</td>
           <td>Ativo</td>
+          <th><FaEdit /></th>
+          <th><FaWindowClose /></th>
         </tr>
       </tbody>
     </Table>
