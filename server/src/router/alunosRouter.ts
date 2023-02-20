@@ -30,14 +30,21 @@ alunosRouter.get('/', (req, res) => {
 // =========================| ATUALIZANDO ALUNO |======================//
 
 alunosRouter.put('/:id', (req, res) => {
-  const id  = parseFloat(req.params.id)
+  const id  = parseInt(req.params.id);
   
   const { firtName, age, grade } = req.body;
 
-  const user = alunosController.updateAlunos({firtName, age, grade, id});
+  const alunos = alunosController.updateAlunos({firtName, age, grade, id});
 
 
-  res.status(200).send();
+  alunos.then(aluno => {
+    if(!aluno){
+      console.log(aluno)
+      res.status(400).send("Erro usuario não existe ");
+    }else{
+      res.status(200).send();
+    };
+  });
 
 });
 
