@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import BasicExample from '../../components/Form';
 import NavBar from '../../components/Nav';
-import { Main } from './Main';
+import { Main } from './Styled';
 
 function App() {
   return (
