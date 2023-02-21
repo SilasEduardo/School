@@ -5,6 +5,7 @@ export const Title = styled.h1`
     margin-top: 10px;
     margin-bottom: 30px;
     color: white;
+    text-align: center;
   }
   
 `
