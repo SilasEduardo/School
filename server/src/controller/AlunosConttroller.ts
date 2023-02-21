@@ -6,6 +6,7 @@ const aluno = new Alunos();
 
 interface IAlunos {
   firtName: string,
+  email: string,
   age: string,
   grade: Array<number>,
 };
@@ -13,16 +14,18 @@ interface IAlunos {
 interface IAlunosUpDate {
   id: number,
   firtName: string,
+  email: string,
   age: string,
   grade: Array<number>,
 };
 
 class AlunosConttroler {
 //=====================| CRIANDO ALUNOS |=========================//
-  async createAluno({firtName, age, grade}: IAlunos){
+  async createAluno({firtName, age, grade, email}: IAlunos){
 
     Object.assign(aluno, {
       firtName,
+      email,
       age,
       grade,
       create_at: new Date(),
@@ -45,7 +48,7 @@ class AlunosConttroler {
 
 // =========================| ATUALIZANDO ALUNO |======================//
 
-   async updateAlunos({firtName, age, grade, id}: IAlunosUpDate){
+   async updateAlunos({firtName, email, age, grade, id}: IAlunosUpDate){
 
     try{
       
@@ -55,6 +58,7 @@ class AlunosConttroler {
   
       Object.assign(aluno, {
         firtName,
+        email,
         age,
         grade,
         create_at: new Date(),

@@ -8,9 +8,9 @@ const alunosController = new AlunosConttroler()
 
 
 alunosRouter.post('/', (req, res) => {
-  const { firtName, age, grade } = req.body;
+  const { firtName, age, grade, email } = req.body;
 
-  alunosController.createAluno({firtName, age, grade});
+  alunosController.createAluno({firtName, age, grade, email});
 
   res.status(200).send();
 
@@ -32,9 +32,9 @@ alunosRouter.get('/', (req, res) => {
 alunosRouter.put('/:id', (req, res) => {
   const id  = parseInt(req.params.id);
   
-  const { firtName, age, grade } = req.body;
+  const { firtName, email, age, grade } = req.body;
 
-  const alunos = alunosController.updateAlunos({firtName, age, grade, id});
+  const alunos = alunosController.updateAlunos({firtName, email , age, grade, id});
 
 
   alunos.then(aluno => {
