@@ -36,7 +36,7 @@ function BasicExample() {
             <Form.Label htmlFor="disabledSelect">Matricula</Form.Label>
             <Form.Select id="disabledSelect">
               <option value="true">Ativa</option>
-              <option value="false">Desativa</option>
+              <option value="false">Desativado</option>
             </Form.Select>
           </Form.Group>
 

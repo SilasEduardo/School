@@ -3,7 +3,7 @@ import React from 'react';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaEdit, FaWindowClose } from 'react-icons/fa';
-import { Title } from './steled';
+import { Title, EditButto, DeleteButton } from './steled';
 
 function DarkExample() {
   return (
@@ -35,8 +35,8 @@ function DarkExample() {
           <td>silasandrade94@gmail.com</td>
           <td>1, 10, 5, 15</td>
           <td>Ativo</td>
-          <th><FaEdit /></th>
-          <th><FaWindowClose /></th>
+          <th><EditButto><FaEdit className='editButton' /></EditButto></th>
+          <th><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </th>
         </tr>
       </tbody>
     </Table>
