@@ -1,3 +1,9 @@
+import styled from 'styled-components';
+
+
+
+export const Main = styled.main`
+
 .App {
   text-align: center;
 }
@@ -36,3 +42,6 @@
     transform: rotate(360deg);
   }
 }
+  
+`
+
