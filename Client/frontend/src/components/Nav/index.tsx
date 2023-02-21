@@ -5,11 +5,13 @@ import { Nav } from './styled';
 
 function NavBar() {
   return(
+    
     <>
     <Nav>
       <div className='nav'>
-        <div><a href="#"><img className='logo' src="/—Pngtree—school logo_6846798.png" alt="logo" /></a></div>
-        <div><Link className='addNew' to='/Cadastro'>Novo Aluno</Link></div>
+        <div><Link to='/'><img className='logo' src="/—Pngtree—school logo_6846798.png" alt="logo" /></Link></div>
+        <div>{ window.location.pathname === "/Cadastro" ? <Link className='addNew' to='/'>Lista de Alunos</Link>:
+        <Link className='addNew' to='/Cadastro'>Novo Aluno</Link>  }</div>
       </div>
 
     </Nav>
