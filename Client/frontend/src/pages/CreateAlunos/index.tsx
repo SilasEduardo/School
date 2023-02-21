@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+import BasicExample from '../../components/Form';
 import NavBar from '../../components/Nav';
 import { Main } from './Main';
 
@@ -7,7 +9,10 @@ function App() {
     <div className="App">
       <NavBar />
       <Main />
-      
+      <Container>
+      <BasicExample />
+      </Container>
+
     </div>
   );
 }
