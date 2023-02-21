@@ -15,6 +15,7 @@ export const Container = styled.section`
   max-width: 60rem;
   max-height: 60rem;
   background: #3a30ce;
+  text-align: center;
   padding: 30px;
   border: solid 1px #3a30ce;
 `

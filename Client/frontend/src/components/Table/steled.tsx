@@ -14,7 +14,7 @@ export const EditButto = styled.td`
   .editButton{
     color: green;
     border: none;
-    margin:0%;
+    margin-left: 25px;
     cursor: pointer;
   }
   
@@ -24,7 +24,20 @@ export const DeleteButton = styled.td`
   .deleteButton{
     color: red;
     border: none;
-    margin:0%;
+    margin-left: 25px;
+    cursor: pointer;
+  }
+  
+`
+
+interface Matricula {
+  isActive: any;
+}
+
+export const Matricula = styled.td<Matricula>`
+  .matricula{
+    color: ${(props)=> props.isActive? 'green' : 'red'};
+    border: none;
     cursor: pointer;
   }
   
