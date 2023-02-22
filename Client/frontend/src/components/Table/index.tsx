@@ -45,6 +45,36 @@ function DarkExample() {
           <th><EditButto><FaEdit className='editButton' /></EditButto></th>
           <th><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </th>
         </tr>
+        <tr>
+          <td>1</td>
+          <td>Silas</td>
+          <td>28</td>
+          <td>silasandrade94@gmail.com</td>
+          <td>6</td>
+          <Matricula isActive={false}><td className='matricula'>desativado</td></Matricula>
+          <th><EditButto><FaEdit className='editButton' /></EditButto></th>
+          <th><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Silas</td>
+          <td>28</td>
+          <td>silasandrade94@gmail.com</td>
+          <td>6</td>
+          <Matricula isActive={false}><td className='matricula'>desativado</td></Matricula>
+          <th><EditButto><FaEdit className='editButton' /></EditButto></th>
+          <th><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Silas</td>
+          <td>28</td>
+          <td>silasandrade94@gmail.com</td>
+          <td>6</td>
+          <Matricula isActive={false}><td className='matricula'>desativado</td></Matricula>
+          <th><EditButto><FaEdit className='editButton' /></EditButto></th>
+          <th><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </th>
+        </tr>
       </tbody>
     </Table>
   </>
