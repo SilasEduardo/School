@@ -23,6 +23,12 @@ class AlunosConttroler {
 //=====================| CRIANDO ALUNOS |=========================//
   async createAluno({firtName, age, grade, email}: IAlunos){
 
+    const alunosExists = await prima.alunos.findMany({where: {email}});
+
+    if(alunosExists.length > 0){
+      return false;
+    }
+
     Object.assign(aluno, {
       firtName,
       email,
@@ -32,6 +38,7 @@ class AlunosConttroler {
       stutus: true,
     });
      await prima.alunos.create({data: aluno});
+     return true;
    };
 
 

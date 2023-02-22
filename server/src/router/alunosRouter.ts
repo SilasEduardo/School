@@ -10,10 +10,14 @@ const alunosController = new AlunosConttroler()
 alunosRouter.post('/', (req, res) => {
   const { firtName, age, grade, email } = req.body;
 
-  alunosController.createAluno({firtName, age, grade, email});
-
-  res.status(200).send();
-
+  const alunos = alunosController.createAluno({firtName, age, grade, email});
+  alunos.then(aluno => {
+    if(!aluno){
+      res.status(400).send("Email já Cadstrado");
+    }else{
+      res.status(200).send();
+    };
+  });
 });
 
 
@@ -39,7 +43,6 @@ alunosRouter.put('/:id', (req, res) => {
 
   alunos.then(aluno => {
     if(!aluno){
-      console.log(aluno)
       res.status(400).send("Erro usuario não existe ");
     }else{
       res.status(200).send();
@@ -57,7 +60,6 @@ alunosRouter.delete('/:id', (req, res) => {
 
     alunos.then(aluno => {
       if(!aluno){
-        console.log(aluno)
         res.status(400).send("Erro usuario não existe ");
       }else{
         res.status(200).send();
