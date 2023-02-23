@@ -18,6 +18,6 @@ model Alunos{
   age String
   grade Int[]
   create_at DateTime
-  stutus Boolean
+  status Boolean
 }
 

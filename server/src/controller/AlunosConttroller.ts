@@ -9,6 +9,7 @@ interface IAlunos {
   email: string,
   age: string,
   grade: Array<number>,
+  status: boolean,
 };
 
 interface IAlunosUpDate {
@@ -17,11 +18,13 @@ interface IAlunosUpDate {
   email: string,
   age: string,
   grade: Array<number>,
+  status: boolean,
 };
 
 class AlunosConttroler {
 //=====================| CRIANDO ALUNOS |=========================//
-  async createAluno({firtName, age, grade, email}: IAlunos){
+  async createAluno({firtName, age, grade, email, status}: IAlunos){
+
 
     const alunosExists = await prima.alunos.findMany({where: {email}});
 
@@ -35,7 +38,7 @@ class AlunosConttroler {
       age,
       grade,
       create_at: new Date(),
-      stutus: true,
+      status,
     });
      await prima.alunos.create({data: aluno});
      return true;
@@ -55,7 +58,7 @@ class AlunosConttroler {
 
 // =========================| ATUALIZANDO ALUNO |======================//
 
-   async updateAlunos({firtName, email, age, grade, id}: IAlunosUpDate){
+   async updateAlunos({firtName, email, age, grade, id, status}: IAlunosUpDate){
 
     try{
       
@@ -69,7 +72,7 @@ class AlunosConttroler {
         age,
         grade,
         create_at: new Date(),
-        stutus: true,
+        status,
       });
   
       await prima.alunos.update({

@@ -8,9 +8,9 @@ const alunosController = new AlunosConttroler()
 
 
 alunosRouter.post('/', (req, res) => {
-  const { firtName, age, grade, email } = req.body;
+  const { firtName, age, grade, email, status } = req.body;
 
-  const alunos = alunosController.createAluno({firtName, age, grade, email});
+  const alunos = alunosController.createAluno({firtName, age, grade, email, status});
   alunos.then(aluno => {
     if(!aluno){
       res.status(400).send("Email já Cadstrado");
@@ -36,9 +36,9 @@ alunosRouter.get('/', (req, res) => {
 alunosRouter.put('/:id', (req, res) => {
   const id  = parseInt(req.params.id);
   
-  const { firtName, email, age, grade } = req.body;
+  const { firtName, email, age, grade, status } = req.body;
 
-  const alunos = alunosController.updateAlunos({firtName, email , age, grade, id});
+  const alunos = alunosController.updateAlunos({firtName, email , age, grade, id, status});
 
 
   alunos.then(aluno => {

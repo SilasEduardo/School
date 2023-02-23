@@ -6,7 +6,7 @@ CREATE TABLE "Alunos" (
     "age" TEXT NOT NULL,
     "grade" INTEGER[],
     "create_at" TIMESTAMP(3) NOT NULL,
-    "stutus" BOOLEAN NOT NULL,
+    "status" BOOLEAN NOT NULL,
 
     CONSTRAINT "Alunos_pkey" PRIMARY KEY ("id")
 );
