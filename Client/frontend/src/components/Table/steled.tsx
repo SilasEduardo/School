@@ -37,8 +37,6 @@ interface Matricula {
 export const Matricula = styled.td<Matricula>`
   .matricula{
     color: ${(props)=> props.isActive? 'green' : 'red'};
-    border: none;
-    cursor: pointer;
   }
   
 `
