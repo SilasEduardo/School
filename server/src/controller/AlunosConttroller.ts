@@ -38,7 +38,7 @@ class AlunosConttroler {
       age,
       grade,
       create_at: new Date(),
-      status,
+      status
     });
      await prima.alunos.create({data: aluno});
      return true;

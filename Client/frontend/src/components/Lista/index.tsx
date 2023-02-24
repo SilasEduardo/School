@@ -36,7 +36,7 @@ function Lista({ alunos }: any){
   
       function statusMatricula(){
         let statusMatricula = '';
-        if(aluno.stutus){
+        if(aluno.status){
           statusMatricula = "ativa"
         }else{
           statusMatricula = "inativa"
@@ -51,7 +51,7 @@ function Lista({ alunos }: any){
         <td>{aluno.age}</td>
         <td>{aluno.email}</td>
         <td>{mediaCalculada()}</td>
-        <Matricula isActive={aluno.stutus}><td className='matricula'>{statusMatricula()}</td></Matricula>
+        <Matricula isActive={aluno.status}><td className='matricula'>{statusMatricula()}</td></Matricula>
         <td><EditButto><FaEdit className='editButton' /></EditButto></td>
         <td><DeleteButton><FaWindowClose className='deleteButton' /></DeleteButton> </td>
         </tr>

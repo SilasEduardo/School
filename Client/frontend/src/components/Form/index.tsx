@@ -2,8 +2,30 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Title } from './styled';
+import api from '../../services/Api';
+
+interface IFormData {
+  firstName: string;
+  age: string;
+  email: string;
+  media: number;
+  matricula: string;
+
+}
+
+
 
 function BasicExample() {
+
+  function handleSubmit(event: any){
+      event.preventDefault();
+  }
+
+  function handleSave(dados: IFormData){
+    return console.log(dados)
+  }
+
+  
   return (
     <>
      <Container>
@@ -11,7 +33,7 @@ function BasicExample() {
         <h1>Cadastrar novo Aluno</h1>
       </Title>
       
-      <Form>
+      <Form onSubmit={handleSubmit} action="#" className="form" >
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nome</Form.Label>
           <Form.Control type="text" />
@@ -40,7 +62,7 @@ function BasicExample() {
             </Form.Select>
           </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button type="submit" onClick={handleSave}>
           Cadastrar
         </Button>
         </Form>

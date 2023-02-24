@@ -36,6 +36,8 @@ interface Matricula {
 
 export const Matricula = styled.td<Matricula>`
   .matricula{
+    position:relative;
+    left: 38px;
     color: ${(props)=> props.isActive? 'green' : 'red'};
   }
   
